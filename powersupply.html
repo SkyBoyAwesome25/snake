@@ -318,15 +318,17 @@
                     }
                     console.log("if")
                 } else {
-                    console.log("else")
-                    bitcoincount = bitcoincount - ((power4+1) * 2500);
-                    power4 = power4 + 1;
-                    power = power + 4;
-                    localStorage.setItem("newbitcoincount", bitcoincount);
-                    localStorage.setItem("reset", 1);
-                    localStorage.setItem("power", power);
-                    localStorage.setItem("power4", power4);
-                    update()
+                    if (localStorage.getItem("bitcoincount") >= ((power4+1) * 2500)) {
+                        console.log("else")
+                        bitcoincount = bitcoincount - ((power4+1) * 2500);
+                        power4 = power4 + 1;
+                        power = power + 4;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power4", power4);
+                        update()
+                    }
                 }
             }
 
@@ -347,15 +349,17 @@
                     }
                     console.log("if")
                 } else {
-                    console.log("else")
-                    bitcoincount = bitcoincount - ((power5+1) * 3000);
-                    power5 = power5 + 1;
-                    power = power + 5;
-                    localStorage.setItem("newbitcoincount", bitcoincount);
-                    localStorage.setItem("reset", 1);
-                    localStorage.setItem("power", power);
-                    localStorage.setItem("power5", power5);
-                    update()
+                    if (localStorage.getItem("bitcoincount") >= ((power5+1) * 3000)) {
+                        console.log("else")
+                        bitcoincount = bitcoincount - ((power5+1) * 3000);
+                        power5 = power5 + 1;
+                        power = power + 5;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power5", power5);
+                        update()
+                    }
                 }
             }
             
