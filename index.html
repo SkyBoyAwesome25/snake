@@ -434,31 +434,39 @@
         
         //Save Function
         function save() {
-            localStorage.setItem("bitcoincount", bitcoincount);
-            localStorage.setItem("autoClick", + autoClick);
-            localStorage.setItem("GraphicsCards", GraphicsCards);
-            localStorage.setItem("GraphicsCards2", GraphicsCards2);
-            localStorage.setItem("GraphicsCards3", GraphicsCards3);
-            localStorage.setItem("GraphicsCards4", GraphicsCards4);
-            localStorage.setItem("multiplier", multiplier);
+            localStorage.setItem("bitcoincountsave", bitcoincount);
+            localStorage.setItem("autoClicksave", + autoClick);
+            localStorage.setItem("GraphicsCardssave", GraphicsCards);
+            localStorage.setItem("GraphicsCards2save", GraphicsCards2);
+            localStorage.setItem("GraphicsCards3save", GraphicsCards3);
+            localStorage.setItem("GraphicsCards4save", GraphicsCards4);
+            localStorage.setItem("multipliersave", multiplier);
+            localStorage.setItem("powersave", power);
+            localStorage.setItem("power1save", localStorage.getItem("power1"));
+            localStorage.setItem("power2save", localStorage.getItem("power2"));
+            localStorage.setItem("power3save", localStorage.getItem("power3"));
+            localStorage.setItem("power4save", localStorage.getItem("power4"));
+            localStorage.setItem("power5save", localStorage.getItem("power5"));
         }
 
         //Load Function
         function load() {
-            bitcoincount = localStorage.getItem("bitcoincount");
+            bitcoincount = localStorage.getItem("bitcoincountsave");
             bitcoincount = parseInt(bitcoincount);
-            autoClick = localStorage.getItem("autoClick");
+            autoClick = localStorage.getItem("autoClicksave");
             autoClick = parseInt(autoClick);
-            GraphicsCards = localStorage.getItem("GraphicsCards");
+            GraphicsCards = localStorage.getItem("GraphicsCardssave");
             GraphicsCards = parseInt(GraphicsCards);
-            GraphicsCards2 = localStorage.getItem("GraphicsCards2");
+            GraphicsCards2 = localStorage.getItem("GraphicsCards2save");
             GraphicsCards2 = parseInt(GraphicsCards2);
-            GraphicsCards3 = localStorage.getItem("GraphicsCards3");
+            GraphicsCards3 = localStorage.getItem("GraphicsCards3save");
             GraphicsCards3 = parseInt(GraphicsCards3);
-            GraphicsCards4 = localStorage.getItem("GraphicsCards4");
+            GraphicsCards4 = localStorage.getItem("GraphicsCards4save");
             GraphicsCards4 = parseInt(GraphicsCards4);
-            multiplier = localStorage.getItem("multiplier");
+            multiplier = localStorage.getItem("multipliersave");
             multiplier = parseInt(multiplier);
+            power = localStorage.getItem("powersave");
+            power = parseInt(power);
             update()
         }
 
