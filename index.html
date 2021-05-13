@@ -456,8 +456,7 @@
                 if (powerconsumed < power) {
                     bitcoincount = bitcoincount - ((autoClick+1) * 12);
                     autoClick = autoClick + 1;
-                    powerconsumed = (powerconsumed*10) + 1;
-                    powerconsumed = powerconsumed/10;
+                    powerconsumed = powerconsumed + 1;
                     update()
                 }
                 localStorage.setItem("autoClick", autoClick);
@@ -468,11 +467,11 @@
         //Buying GTX 1050 TI Function
         function buyGraphicsCard() {
             if (bitcoincount >= ((GraphicsCards+1) * 50)) {
-                if (powerconsumed < (power - 0.19)) {
+                if (powerconsumed < (power - 0.9)) {
                     bitcoincount = bitcoincount - ((GraphicsCards+1) * 50);
                     GraphicsCards = GraphicsCards + 1;
-                    powerconsumed = (powerconsumed*10) + 2;
-                    powerconsumed = powerconsumed/10;
+                    powerconsumed = powerconsumed + 1;
+                    
                     update()
                 }
                 localStorage.setItem("GraphicsCards", GraphicsCards);
@@ -483,11 +482,11 @@
         //Buying GTX 1660 Super Function
         function buyGraphicsCard2() {
             if (bitcoincount >= ((GraphicsCards2+1) * 75)) {
-                if (powerconsumed < (power - 0.29)) {
+                if (powerconsumed < (power - 0.9)) {
                     bitcoincount = bitcoincount - ((GraphicsCards2+1) * 75);
                     GraphicsCards2 = GraphicsCards2 + 1;
-                    powerconsumed = (powerconsumed*10) + 3;
-                    powerconsumed = powerconsumed/10;
+                    powerconsumed = powerconsumed + 1;
+                    
                 update()
                 }
                 localStorage.setItem("GraphicsCards2", GraphicsCards2);
@@ -498,11 +497,11 @@
         //Buying GTX 2070 TI Function
         function buyGraphicsCard3() {
             if (bitcoincount >= ((GraphicsCards3+1) * 100)) {
-                if (powerconsumed < (power - 0.39)) {
+                if (powerconsumed < (power - 0.9)) {
                 bitcoincount = bitcoincount - ((GraphicsCards3+1) * 100);
                 GraphicsCards3 = GraphicsCards3 + 1;
-                powerconsumed = (powerconsumed*10) + 4;
-                    powerconsumed = powerconsumed/10;
+                powerconsumed = powerconsumed + 1;
+                
                 update()
                 }
                 localStorage.setItem("GraphicsCards3", GraphicsCards3);
@@ -513,11 +512,11 @@
         //Buying RTX 3090 Function
         function buyGraphicsCard4() {
             if (bitcoincount >= ((GraphicsCards4+1) * 300)) {
-                if (powerconsumed < (power - 0.49)) {
+                if (powerconsumed < (power - 0.9)) {
                 bitcoincount = bitcoincount - ((GraphicsCards4+1) * 300);
                 GraphicsCards4 = GraphicsCards4 + 1;
-                powerconsumed = (powerconsumed*10) + 5;
-                    powerconsumed = powerconsumed/10;
+                powerconsumed = powerconsumed + 1;
+                
                 setTimeout(function(){
                     document.getElementById('rack4-1').style.display = "none";},10);
                 setTimeout(function(){
