@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="powerstyle.css">
+        <title>Power Supply</title>
+    </head>
+    <script>
+        function update() {
+        
+        document.getElementById('text').value = localStorage.getItem("power");
+        if (localStorage.getItem("reset") == 0 || isNaN(reset)) {
+            document.getElementById('count').value = localStorage.getItem("bitcoincount");
+        } 
+        if (localStorage.getItem("reset") == 1) {
+            document.getElementById('count').value = localStorage.getItem("newbitcoincount");
+        }
+        
+        //Fractal Ion+ 550W Bronze
+        document.getElementById('amountPower1').innerHTML = power1 + " Fractal Ion+ 550W Bronze";
+        document.getElementById('costPower1').innerHTML = ((power1 + 1) * 500) + " Bitcoins";
+        
+        //Fractal Ion+ 550W Bronze
+        document.getElementById('amountPower2').innerHTML = power2 + " XPG Core Reactor 750W Iron";
+        document.getElementById('costPower2').innerHTML = ((power2 + 1) * 1000) + " Bitcoins";
+        
+        //Fractal Ion+ 550W Bronze
+        document.getElementById('amountPower3').innerHTML = power3 + " Corsair AX1000W Titanium";
+        document.getElementById('costPower3').innerHTML = ((power3 + 1) * 2000) + " Bitcoins";
+        
+        //Fractal Ion+ 550W Bronze
+        document.getElementById('amountPower4').innerHTML = power4 + " CoolerMaster V1300W Diamond";
+        document.getElementById('costPower4').innerHTML = ((power4 + 1) * 2500) + " Bitcoins";
+        
+        //Fractal Ion+ 550W Bronze
+        document.getElementById('amountPower5').innerHTML = power5 + " Solar Panel";
+        document.getElementById('costPower5').innerHTML = ((power5 + 1) * 3000) + " Bitcoins";
+        
+        if (power1 >= 1) {
+            setTimeout(function(){
+                document.getElementById('rack1-1').style.display = "block";},10);
+        }
+        if (power1 >= 2) {
+            setTimeout(function(){
+                document.getElementById('rack1-2').style.display = "block";},10);
+        }
+        if (power2 >= 1) {
+            setTimeout(function(){
+                document.getElementById('rack2-1').style.display = "block";},10);
+        }
+        if (power2 >= 2) {
+            setTimeout(function(){
+                document.getElementById('rack2-2').style.display = "block";},10);
+        }
+        if (power3 >= 1) {
+            setTimeout(function(){
+                document.getElementById('rack3-1').style.display = "block";},10);
+        }
+        if (power3 >= 2) {
+            setTimeout(function(){
+                document.getElementById('rack3-2').style.display = "block";},10);
+        }
+        if (power4 >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack4-1').style.display = "block";},10);
+        }
+        if (power4 >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack4-2').style.display = "block";},10);
+        }
+        if (power5 >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack5-1').style.display = "block";},10);
+        }
+        if (power5 >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack5-2').style.display = "block";},10);
+        }
+        }
+
+    </script>
+    <body>
+
+        <button class="index" onclick="window.location.href='\index.html'; reset()">Go To Main</button>
+        
+        <div id="powerdiv">
+            <img src="https://i.ibb.co/J2R4thv/thunder.png" id="lightning">
+            <div>
+                <div class="amount">
+                    You got: <input type="text" id="text" disabled style= text-align:center> Power
+                </div>
+                <div class="amount2">
+                    You got: <input type="text" id="count" disabled style= text-align:center> Bitcoins
+                </div>
+            <!--Fractal Ion+ 550W Bronze-->
+            <div class="upgradediv">
+                <button class="upgrade"><a href="#" onclick="buyPower1()" class="link"><p style="float: left;">Buy 1 Fractal Ion+ 550W Bronze</p><p id="amountPower1" style="float: right;">0 Fractal Ion+ 550W Bronze</p><br><p id="costPower1" >500 Bitcoins</p></a></button>
+            </div>
+            <!--GTX 1050 TI-->
+            <div class="upgradediv">
+                <button class="upgrade"><a href = '#' onClick="buyPower2()" class="link"><p style="float: left;">Buy 1 XPG Core Reactor 750W Iron</p><p id ="amountPower2" style="float: right;">0 XPG Core Reactor 750W Iron</p><br><p id ="costPower2">1000 Bitcoins</p></a></button>
+            </div>
+            <!--GTX 1660 Super-->
+            <div class="upgradediv">
+                <button class="upgrade"><a href = '#' onClick="buyPower3()" class="link"><p style="float: left;">Buy 1 Corsair AX1000W Titanium</p><p id ="amountPower3" style="float: right;">0 Corsair AX1000W Titanium</p><br><p id ="costPower3">2000 Bitcoins</p></a></button>
+            </div>
+            <!--GTX 2070 TI-->
+            <div class="upgradediv">
+                <button class="upgrade"><a href = '#' onClick="buyPower4()" class="link"><p style="float: left;">Buy 1 CoolerMaster V1300W Diamond</p><p id ="amountPower4" style="float: right;">0 CoolerMaster V1300W Diamond</p><br><p id ="costPower4">2500 Bitcoins</p></a></button>
+            </div>
+            <!--RTX 3090-->
+            <div class="upgradediv">
+                <button class="upgrade"><a href = '#' onClick="buyPower5()" class="link"><p style="float: left;">Buy 1 Solar Panel</p><p id ="amountPower5" style="float: right;">0 Solar Panel</p><br><p id ="costPower5">3000 Bitcoins</p></a></button>
+            </div>
+            </div></div>
+        </div>
+        <!--GPU Rack-->
+    <div id="hidden2">
+        <!--Outer Case-->
+        <div id="rack-outer">
+            <!--First Row-->
+            <div id="rack1">
+                <div id="rack1-1"><div class="case"></div></div>
+                <div id="rack1-2"><div class="case"></div></div>
+            </div>
+            <!--Second Row-->
+            <div id="rack2">
+                <div id="rack2-1"><div class="case"></div></div>
+                <div id="rack2-2"><div class="case"></div></div>
+                
+            </div>
+            <!--Third Row-->
+            <div id="rack3">
+                <div id="rack3-1"><div class="case"></div></div>
+                <div id="rack3-2"><div class="case"></div></div>
+                
+            </div>
+            <!--Fourth Row-->
+            <div id="rack4">
+                <div id="rack4-1"><div class="case"></div></div>
+                <div id="rack4-2"><div class="case"></div></div>
+                
+            </div>
+            <!--Fifth Row-->
+            <div id="rack5">
+                <div id="rack5-1"><div class="case"></div></div>
+                <div id="rack5-2"><div class="case"></div></div>
+                
+            </div>
+        </div>
+        </div>
+        <script>
+        var bitcoincount = 0;
+        var power1 = 0;
+        var power2 = 0;
+        var power3 = 0;
+        var power4 = 0;
+        var power5 = 0;
+        
+        //Adding Timer Function
+    function timer() {
+    
+    }
+
+    //Actual Adding Timer
+    setInterval(timer, 1000)
+
+    //Update Timer Function
+    function fasttimer() {
+        update()
+        if (localStorage.getItem("reset2") ==  1) {
+            power1 = localStorage.getItem("power1");
+            power1 = parseInt(power1);
+            power2 = localStorage.getItem("power2");
+            power2 = parseInt(power2);
+            power3 = localStorage.getItem("power3");
+            power3 = parseInt(power3);
+            power4 = localStorage.getItem("power4");
+            power4 = parseInt(power4);
+            power5 = localStorage.getItem("power5");
+            power5 = parseInt(power5);
+            localStorage.setItem("reset2", 0);
+    }
+        localStorage.setItem("power1", power1);
+        localStorage.setItem("power2", power2);
+        localStorage.setItem("power3", power3);
+        localStorage.setItem("power4", power4);
+        localStorage.setItem("power5", power5);
+        bitcoincount = localStorage.getItem("bitcoincount");
+        bitcoincount = parseInt(bitcoincount);
+        power = localStorage.getItem("power");
+        power = parseInt(power);
+        localStorage.setItem("bitcoincount", bitcoincount);
+        if (power == 8) {
+            power = power + power1 + power2 + power3 + power4 + power5
+            localStorage.setItem("power", power);
+        }
+    }
+
+    //Actual Update Timer 
+    setInterval(fasttimer, 100)
+        //Buying Power1 Function
+        function buyPower1() {
+                if (localStorage.getItem("reset") == 1) {
+                    if (localStorage.getItem("newbitcoincount") >= ((power1+1) * 500)) {
+                        bitcoincount = localStorage.getItem("newbitcoincount") - ((power1+1) * 500);
+                        power1 = power1 + 1;
+                        console.log(power1);
+                        power = power + 1;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power1", power1);
+                        update()
+                        console.log("if")
+                    }
+                    console.log("if")
+                } else {
+                    if (localStorage.getItem("bitcoincount") >= ((power1+1) * 500)) {
+                        console.log("else")
+                        bitcoincount = bitcoincount - ((power1+1) * 500);
+                        power1 = power1 + 1;
+                        power = power + 1;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power1", power1);
+                        update()
+                    }
+                }
+            }
+
+        //Buying Power2 Function
+        function buyPower2() {
+            if (localStorage.getItem("reset") == 1) {
+                    if (localStorage.getItem("newbitcoincount") >= ((power2+1) * 1000)) {
+                        bitcoincount = localStorage.getItem("newbitcoincount") - ((power2+1) * 1000);
+                        power2 = power2 + 1;
+                        console.log(power1);
+                        power = power + 2;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power2", power2);
+                        update()
+                        console.log("if")
+                    }
+                    console.log("if")
+                } else {
+                    if (localStorage.getItem("bitcoincount") >= ((power2+1) * 1000)) {
+                        console.log("else")
+                        bitcoincount = bitcoincount - ((power2+1) * 1000);
+                        power2 = power2 + 1;
+                        power = power + 2;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power2", power2);
+                        update()
+                    }
+                }
+        }
+
+        //Buying Power3 Function
+        function buyPower3() {
+            if (localStorage.getItem("reset") == 1) {
+                    if (localStorage.getItem("newbitcoincount") >= ((power3+1) * 2000)) {
+                        bitcoincount = localStorage.getItem("newbitcoincount") - ((power3+1) * 2000);
+                        power3 = power3 + 1;
+                        console.log(power1);
+                        power = power + 3;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power3", power3);
+                        update()
+                        console.log("if")
+                    }
+                    console.log("if")
+                } else {
+                    if (localStorage.getItem("bitcoincount") >= ((power3+1) * 2000)) {
+                        console.log("else")
+                        bitcoincount = bitcoincount - ((power3+1) * 2000);
+                        power3 = power3 + 1;
+                        power = power + 3;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power3", power3);
+                        update()
+                    }
+                }
+        }
+
+        //Buying Power4 Function
+        function buyPower4() {
+                if (localStorage.getItem("reset") == 1) {
+                    if (localStorage.getItem("newbitcoincount") >= ((power4+1) * 2500)) {
+                        bitcoincount = localStorage.getItem("newbitcoincount") - ((power4+1) * 2500);
+                        power4 = power4 + 1;
+                        console.log(power1);
+                        power = power + 4;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power4", power4);
+                        update()
+                        console.log("if")
+                    }
+                    console.log("if")
+                } else {
+                    console.log("else")
+                    bitcoincount = bitcoincount - ((power4+1) * 2500);
+                    power4 = power4 + 1;
+                    power = power + 4;
+                    localStorage.setItem("newbitcoincount", bitcoincount);
+                    localStorage.setItem("reset", 1);
+                    localStorage.setItem("power", power);
+                    localStorage.setItem("power4", power4);
+                    update()
+                }
+            }
+
+        //Buying Power5 Function
+        function buyPower5() {
+                if (localStorage.getItem("reset") == 1) {
+                    if (localStorage.getItem("newbitcoincount") >= ((power5+1) * 3000)) {
+                        bitcoincount = localStorage.getItem("newbitcoincount") - ((power5+1) * 3000);
+                        power5 = power5 + 1;
+                        console.log(power1);
+                        power = power + 5;
+                        localStorage.setItem("newbitcoincount", bitcoincount);
+                        localStorage.setItem("reset", 1);
+                        localStorage.setItem("power", power);
+                        localStorage.setItem("power5", power5);
+                        update()
+                        console.log("if")
+                    }
+                    console.log("if")
+                } else {
+                    console.log("else")
+                    bitcoincount = bitcoincount - ((power5+1) * 3000);
+                    power5 = power5 + 1;
+                    power = power + 5;
+                    localStorage.setItem("newbitcoincount", bitcoincount);
+                    localStorage.setItem("reset", 1);
+                    localStorage.setItem("power", power);
+                    localStorage.setItem("power5", power5);
+                    update()
+                }
+            }
+            
+
+        function reset() {
+            localStorage.setItem("reset", 1);
+            if (isNaN(localStorage.getItem("newbitcoincount", bitcoincount))) {
+                localStorage.setItem("newbitcoincount", localStorage.getItem("bitcoincount", bitcoincount))
+                console.log("if")
+            } else {
+                //localStorage.setItem("newbitcoincount", bitcoincount)
+                console.log("else")
+            }  
+
+        }
+        </script>
+
+    </body>
