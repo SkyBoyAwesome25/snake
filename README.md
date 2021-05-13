@@ -1,1 +1,1 @@
-# snake
+# Bitcoin Game
