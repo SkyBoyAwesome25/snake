@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="indexStyle.css">
+    <meta charset="UTF-8">
+    <title>Bitcoin Game</title>
+</head>
+
+<script>
+    //Update Function (Does Everything)
+    function update() {
+        //Title
+        document.getElementById('text').value = bitcoincount;
+        document.title = bitcoincount + " Bitcoin's";
+
+        document.getElementById('power').innerHTML = "Power: " + powerconsumed + '/' + power;
+        
+        //Multiplier
+        document.getElementById('amountMultiplier').innerHTML = "Multiplier Upgrade x" + (multiplier+1);
+        //document.getElementById('amountMultiplier2').innerHTML = "x" + (multiplier+1);
+        document.getElementById('costMultiplier').innerHTML = (((multiplier+1) * 50)*(0.05*((multiplier+1) * 50))) + " Bitcoin's";
+        document.getElementById('currentMultiplier').innerHTML = "Your Current Multiplier is x" + (multiplier);
+        
+        //AutoClicker
+        document.getElementById('amountAutoClick').innerHTML = autoClick + " Auto Clickers";
+        document.getElementById('costAutoClick').innerHTML = ((autoClick + 1) * 12) + " Bitcoins";
+
+        //GTX 1050 TI (Graphics Cards)
+        document.getElementById('amountGraphicsCard').innerHTML = GraphicsCards + " GTX 1050 TI";
+        document.getElementById('costGraphicsCard').innerHTML = ((GraphicsCards+1)*50) + " Bitcoins";
+
+        //GTX 1660 Super (Graphics Cards2)
+        document.getElementById('amountGraphicsCard2').innerHTML = GraphicsCards2 + " GTX 1660 Super";
+        document.getElementById('costGraphicsCard2').innerHTML = ((GraphicsCards2+1)*75) + " Bitcoins";
+
+        //GTX 2050 TI (Graphics Cards3)
+        document.getElementById('amountGraphicsCard3').innerHTML = GraphicsCards3 + " GTX 2050 TI";
+        document.getElementById('costGraphicsCard3').innerHTML = ((GraphicsCards3+1)*100) + " Bitcoins";
+
+        //RTX 3090 (Graphics Cards4)
+        document.getElementById('amountGraphicsCard4').innerHTML = GraphicsCards4 + " RTX 3090";
+        document.getElementById('costGraphicsCard4').innerHTML = ((GraphicsCards4+1)*300) + " Bitcoins";
+
+        //Counter (bitcoinspersecond)
+        document.getElementById('bitcoinspersecond').innerHTML = "You are gaining " + (((autoClick)+(GraphicsCards*2)+(GraphicsCards2*3)+(GraphicsCards3*4)+(GraphicsCards4*8))*multiplier) + " Bitcoin's per/s";
+
+        //AutoClicker Rack/ Bronze GPUs
+        if (autoClick >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack1-1').style.display = "block";},10);
+        }
+        if (autoClick >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack1-2').style.display = "block";},10);
+        }
+        if (autoClick >= 3) {
+        setTimeout(function(){
+            document.getElementById('rack1-3').style.display = "block";},10);
+        }
+        if (autoClick >= 4) {
+        setTimeout(function(){
+            document.getElementById('rack1-4').style.display = "block";},10);
+        }
+        if (autoClick >= 5) {
+        setTimeout(function(){
+            document.getElementById('rack1-5').style.display = "block";},10);
+        }
+
+        //GTX 1050 TI Rack/ Silver GPUs
+        if (GraphicsCards >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack2-1').style.display = "block";},10);
+        }
+        if (GraphicsCards >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack2-2').style.display = "block";},10);
+        }
+        if (GraphicsCards >= 3) {
+        setTimeout(function(){
+            document.getElementById('rack2-3').style.display = "block";},10);
+        }
+        if (GraphicsCards >= 4) {
+        setTimeout(function(){
+            document.getElementById('rack2-4').style.display = "block";},10);
+        }
+        if (GraphicsCards >= 5) {
+        setTimeout(function(){
+            document.getElementById('rack2-5').style.display = "block";},10);
+        }
+
+        //GTX 1660 Super/ Gold GPUs
+        if (GraphicsCards2 >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack3-1').style.display = "block";},10);
+        }
+        if (GraphicsCards2 >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack3-2').style.display = "block";},10);
+        }
+        if (GraphicsCards2 >= 3) {
+        setTimeout(function(){
+            document.getElementById('rack3-3').style.display = "block";},10);
+        }
+        if (GraphicsCards2 >= 4) {
+        setTimeout(function(){
+            document.getElementById('rack3-4').style.display = "block";},10);
+        }
+        if (GraphicsCards2 >= 5) {
+        setTimeout(function(){
+            document.getElementById('rack3-5').style.display = "block";},10);
+        }
+
+        //GTX 2050 TI/ Platinum GPUs
+        if (GraphicsCards3 >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack4-1').style.display = "block";},10);
+        }
+        if (GraphicsCards3 >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack4-2').style.display = "block";},10);
+        }
+        if (GraphicsCards3 >= 3) {
+        setTimeout(function(){
+            document.getElementById('rack4-3').style.display = "block";},10);
+        }
+        if (GraphicsCards3 >= 4) {
+        setTimeout(function(){
+            document.getElementById('rack4-4').style.display = "block";},10);
+        }
+        if (GraphicsCards3 >= 5) {
+        setTimeout(function(){
+            document.getElementById('rack4-5').style.display = "block";},10);
+        }
+
+        //RTX 2090/ Rainbow GPUs
+        if (GraphicsCards4 >= 1) {
+        setTimeout(function(){
+            document.getElementById('rack5-1').style.display = "block";},10);
+        }
+        if (GraphicsCards4 >= 2) {
+        setTimeout(function(){
+            document.getElementById('rack5-2').style.display = "block";},10);
+        }
+        if (GraphicsCards4 >= 3) {
+        setTimeout(function(){
+            document.getElementById('rack5-3').style.display = "block";},10);
+        }
+        if (GraphicsCards4 >= 4) {
+        setTimeout(function(){
+            document.getElementById('rack5-4').style.display = "block";},10);
+        }
+        if (GraphicsCards4 >= 5) {
+        setTimeout(function(){
+            document.getElementById('rack5-5').style.display = "block";},10);
+        }
+    }
+    //Variables
+    var scene3 = 0;
+    
+    var multiplier = 1;
+    var autoClick = 0;
+    var GraphicsCards = 0;
+    var GraphicsCards2 = 0;
+    var GraphicsCards3 = 0;
+    var GraphicsCards4 = 0;
+    var task2 = 0;
+    var task3 = 0;
+    var task4 = 0;
+    var task5 = 0;
+    var powerconsumed = 0;
+    var power = 8;
+    var bitcoincount = 0;
+
+    //console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+    //Adding Timer Function
+    function timer() {
+        bitcoincount = bitcoincount + autoClick*multiplier;
+        bitcoincount = bitcoincount + GraphicsCards*2*multiplier;
+        bitcoincount = bitcoincount + GraphicsCards2*3*multiplier;
+        bitcoincount = bitcoincount + GraphicsCards3*4*multiplier;
+        bitcoincount = bitcoincount + GraphicsCards4*8*multiplier;
+        powerconsumed = autoClick + GraphicsCards + GraphicsCards2 + GraphicsCards3 + GraphicsCards4;
+        update()
+    }
+    //console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+    //Actual Adding Timer
+    setInterval(timer, 1000)
+
+    //Update Timer Function
+    function fasttimer() {
+        update()
+        task1()
+        if (localStorage.getItem("reset") ==  1) {
+            console.log(bitcoincount)
+            bitcoincount = localStorage.getItem("newbitcoincount");
+            bitcoincount = parseInt(bitcoincount);
+            autoClick = localStorage.getItem("autoClick");
+            autoClick = parseInt(autoClick);
+            GraphicsCards = localStorage.getItem("GraphicsCards");
+            GraphicsCards = parseInt(GraphicsCards);
+            GraphicsCards2 = localStorage.getItem("GraphicsCards2");
+            GraphicsCards2 = parseInt(GraphicsCards2);
+            GraphicsCards3 = localStorage.getItem("GraphicsCards3");
+            GraphicsCards3 = parseInt(GraphicsCards3);
+            GraphicsCards4 = localStorage.getItem("GraphicsCards4");
+            GraphicsCards4 = parseInt(GraphicsCards4);
+            multiplier = localStorage.getItem("multiplier");
+            multiplier = parseInt(multiplier);
+            power = localStorage.getItem("power");
+            power = parseInt(power);
+            localStorage.setItem("reset", 0);
+            localStorage.setItem("newbitcoincount", NaN);
+            console.log(bitcoincount)
+    }
+        console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+        console.log(bitcoincount)
+        
+        localStorage.setItem("bitcoincount", bitcoincount)
+        console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+        
+        localStorage.setItem("autoClick", autoClick)
+        
+        localStorage.setItem("GraphicsCards", GraphicsCards);
+        
+        localStorage.setItem("GraphicsCards2", GraphicsCards2);
+        
+        localStorage.setItem("GraphicsCards3", GraphicsCards3);
+        
+        localStorage.setItem("GraphicsCards4", GraphicsCards4);
+        
+        localStorage.setItem("multiplier", multiplier);
+        
+        localStorage.setItem("power", power);
+        
+        console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+        console.log(bitcoincount)
+
+    }
+    console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+    //Actual Update Timer 
+    setInterval(fasttimer, 100)
+
+
+    //Update Timer Function
+    function superfasttimer() {
+        update()
+        //console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+    }
+    //console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+    //Actual Update Timer 
+    setInterval(superfasttimer, 50)
+</script>
+
+<body id="body">
+    <!--Top Left-->
+    <div id="hidden">
+
+    <!--Multiplier Section-->
+    <div id="top-left">
+        <div id="multiplier">
+            <a href="#" onClick="buyMultiplier()"><span id="amountMultiplier2"><img src="https://i.ibb.co/KctLDXC/Bigger-Click-Multiplier.png" width="75px;"></span></a>
+            <p id="amountMultiplier">Multiplier Upgrade x2</p>
+
+            <p id="costMultiplier">50 bitcoin's</p>
+            <p id="currentMultiplier">You Current Multiplier is x1</p>
+        </div>
+        <!--Bitcoin Rate-->
+        <p id="bitcoinspersecond">You are gaining 0 Bitcoin's per/s</p>
+        <!--Bitcoin Picture-->
+        <a href=# onclick="add()"><img src="https://i.ibb.co/vzrnnsn/Hexed-Bitocoin.png" width="300px"></a>
+        <br><br>
+        <button class="powersupply" id="hidden3" style="float: right;" onclick="window.location.href='\powersupply.html'; reset2()">Go To Power Plant</button>
+        <!--Amount Section-->
+        <div class="amount">
+            You got:
+        <input type="text" id="text" disabled style= text-align:center>
+        
+        <script>
+            //Bitcoin Add Function
+            function add() {
+                bitcoincount = bitcoincount + 1*multiplier
+                localStorage.setItem("bitcoincount", bitcoincount)
+                bitcoincount = localStorage.getItem("bitcoincount");
+                bitcoincount = parseInt(bitcoincount);
+                update()
+            }
+        </script>
+        
+        Bitcoins
+        <br><br>
+        </div>
+        <!--Save & Load Buttons-->
+        <button class="button"><a href="#" onclick="save()" class="link"><img src="https://i.ibb.co/6Xn7nPM/save.png" alt="Save Button" width="50px"></a></button>
+        <button class="button"><a href="#" onclick="load()" class="link"><img src="https://i.ibb.co/Z88ytJx/loadedited.png" alt="Load Button" width="50px"></a></button>
+        <p id="power" style="float: left;">Power: </p>
+        <!--Task Bar-->
+        <p id="task">Task: Mine 12 bitcoin by clicking the picture and buy an auto clicker.</p>
+    </div>
+
+    <!--Upgrades-->
+    <div>
+        <!--Auto Clicker-->
+        <div class="upgradediv">
+            <button class="upgrade"><a href="#" onclick="buyAutoClick()" class="link"><p style="float: left;">Buy 1 Auto Clicker</p><p id="amountAutoClick" style="float: right;">0 Auto Clickers</p><p id="costAutoClick" >12 Bitcoins</p></a></button>
+        </div>
+        <!--GTX 1050 TI-->
+        <div class="upgradediv">
+            <button class="upgrade"><a href = '#' onClick="buyGraphicsCard()" class="link"><p style="float: left;">Buy 1 GTX 1050 TI</p><p id ="amountGraphicsCard" style="float: right;">0 GTX 1050 TI</p><p id ="costGraphicsCard">50 Bitcoins</p></a></button>
+        </div>
+        <!--GTX 1660 Super-->
+        <div class="upgradediv">
+            <button class="upgrade"><a href = '#' onClick="buyGraphicsCard2()" class="link"><p style="float: left;">Buy 1 GTX 1660 Super</p><p id ="amountGraphicsCard2" style="float: right;">0 GTX 1660 Super</p><p id ="costGraphicsCard2">75 Bitcoins</p></a></button>
+        </div>
+        <!--GTX 2070 TI-->
+        <div class="upgradediv">
+            <button class="upgrade"><a href = '#' onClick="buyGraphicsCard3()" class="link"><p style="float: left;">Buy 1 GTX 2070 TI</p><p id ="amountGraphicsCard3" style="float: right;">0 GTX 2070 TI</p><p id ="costGraphicsCard3">100 Bitcoins</p></a></button>
+        </div>
+        <!--RTX 3090-->
+        <div class="upgradediv">
+            <button class="upgrade"><a href = '#' onClick="buyGraphicsCard4()" class="link"><p style="float: left;">Buy 1 GTX 3090</p><p id ="amountGraphicsCard4" style="float: right;">0 RTX 3090</p><p id ="costGraphicsCard4">200 Bitcoins</p></a></button>
+        </div>
+    </div>
+    </div>
+
+    <!--GPU Rack-->
+    <div id="hidden2">
+    <!--Outer Case-->
+    <div id="rack-outer">
+        <!--First Row-->
+        <div id="rack1">
+            <div id="rack1-1"><div class="case"></div></div>
+            <div id="rack1-2"><div class="case"></div></div>
+            <div id="rack1-3"><div class="case"></div></div>
+            <div id="rack1-4"><div class="case"></div></div>
+            <div id="rack1-5"><div class="case"></div></div>
+        </div>
+        <!--Second Row-->
+        <div id="rack2">
+            <div id="rack2-1"><div class="case"></div></div>
+            <div id="rack2-2"><div class="case"></div></div>
+            <div id="rack2-3"><div class="case"></div></div>
+            <div id="rack2-4"><div class="case"></div></div>
+            <div id="rack2-5"><div class="case"></div></div>
+        </div>
+        <!--Third Row-->
+        <div id="rack3">
+            <div id="rack3-1"><div class="case"></div></div>
+            <div id="rack3-2"><div class="case"></div></div>
+            <div id="rack3-3"><div class="case"></div></div>
+            <div id="rack3-4"><div class="case"></div></div>
+            <div id="rack3-5"><div class="case"></div></div>
+        </div>
+        <!--Fourth Row-->
+        <div id="rack4">
+            <div id="rack4-1"><div class="case"></div></div>
+            <div id="rack4-2"><div class="case"></div></div>
+            <div id="rack4-3"><div class="case"></div></div>
+            <div id="rack4-4"><div class="case"></div></div>
+            <div id="rack4-5"><div class="case"></div></div>
+        </div>
+        <!--Fifth Row-->
+        <div id="rack5">
+            <div id="rack5-1"><div class="case"></div></div>
+            <div id="rack5-2"><div class="case"></div></div>
+            <div id="rack5-3"><div class="case"></div></div>
+            <div id="rack5-4"><div class="case"></div></div>
+            <div id="rack5-5"><div class="case"></div></div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        switch (localStorage.getItem("startanimation")) {
+            case null:
+                //Start Animation
+                setTimeout(function(){
+                    document.getElementById('hidden').style.display = "null";},21);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/V3MkwfR/poorman2.jpg')";},500);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/Y3G6Kbr/Poor-Frame-1.png')";},4000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/JtW2z1n/Poorman-Frame-2.png')";},4500);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/bgnpknB/Poorman-Frame-3.png')";},5000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/SVZN0FT/Poorman-Frame-4.png')";},5500);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/v35LnqW/poorman4.jpg')";},6000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/bvg9V6P/poorman5.jpg')";},7500);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/mGV1G4V/poorman6.jpg')";},8500);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/Sd05f3c/poorman7.jpg')";},9500);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/S7jCpxk/computer2.jpg')";},10000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/LkqJPNQ/computer3.jpg')";},11000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/fFFgt91/computer4.jpg')";},14000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/Pm6VjQn/computer5.jpg')";},18000);
+                 setTimeout(function(){
+                    document.body.style.backgroundImage = "url('https://i.ibb.co/0hs1Cbb/computer6.jpg')";},19000);
+                setTimeout(function(){
+                    document.getElementById('hidden').style.display = "block";
+                    console.log("revealed2")
+                },21000);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = null;},21000);
+                setTimeout(function(){
+                    document.getElementById('hidden2').style.display = "block";},21000);
+                setTimeout(function(){
+                    document.getElementById('hidden3').style.display = "block";},21000);
+                localStorage.setItem("startanimation", 1);
+                break;
+            default:
+                setTimeout(function(){
+                    document.getElementById('hidden').style.display = "block";
+                    console.log("revealed3")
+                },11);
+                setTimeout(function(){
+                    document.body.style.backgroundImage = null;},21);
+                setTimeout(function(){
+                    document.getElementById('hidden2').style.display = "block";},21);
+                setTimeout(function(){
+                    document.getElementById('hidden3').style.display = "block";},21);
+                break;
+        }
+        
+            
+        
+        //Save Function
+        function save() {
+            localStorage.setItem("bitcoincount", bitcoincount);
+            localStorage.setItem("autoClick", + autoClick);
+            localStorage.setItem("GraphicsCards", GraphicsCards);
+            localStorage.setItem("GraphicsCards2", GraphicsCards2);
+            localStorage.setItem("GraphicsCards3", GraphicsCards3);
+            localStorage.setItem("GraphicsCards4", GraphicsCards4);
+            localStorage.setItem("multiplier", multiplier);
+        }
+
+        //Load Function
+        function load() {
+            bitcoincount = localStorage.getItem("bitcoincount");
+            bitcoincount = parseInt(bitcoincount);
+            autoClick = localStorage.getItem("autoClick");
+            autoClick = parseInt(autoClick);
+            GraphicsCards = localStorage.getItem("GraphicsCards");
+            GraphicsCards = parseInt(GraphicsCards);
+            GraphicsCards2 = localStorage.getItem("GraphicsCards2");
+            GraphicsCards2 = parseInt(GraphicsCards2);
+            GraphicsCards3 = localStorage.getItem("GraphicsCards3");
+            GraphicsCards3 = parseInt(GraphicsCards3);
+            GraphicsCards4 = localStorage.getItem("GraphicsCards4");
+            GraphicsCards4 = parseInt(GraphicsCards4);
+            multiplier = localStorage.getItem("multiplier");
+            multiplier = parseInt(multiplier);
+            update()
+        }
+
+        //Buying AutoClick Function
+        function buyAutoClick() {
+            if (bitcoincount >= ((autoClick+1) * 12)) {
+                if (powerconsumed < power) {
+                    bitcoincount = bitcoincount - ((autoClick+1) * 12);
+                    autoClick = autoClick + 1;
+                    powerconsumed = (powerconsumed*10) + 1;
+                    powerconsumed = powerconsumed/10;
+                    update()
+                }
+                localStorage.setItem("autoClick", autoClick);
+                localStorage.setItem("bitcoincount", bitcoincount);
+            }
+        }
+
+        //Buying GTX 1050 TI Function
+        function buyGraphicsCard() {
+            if (bitcoincount >= ((GraphicsCards+1) * 50)) {
+                if (powerconsumed < (power - 0.19)) {
+                    bitcoincount = bitcoincount - ((GraphicsCards+1) * 50);
+                    GraphicsCards = GraphicsCards + 1;
+                    powerconsumed = (powerconsumed*10) + 2;
+                    powerconsumed = powerconsumed/10;
+                    update()
+                }
+                localStorage.setItem("GraphicsCards", GraphicsCards);
+                localStorage.setItem("bitcoincount", bitcoincount);
+            }
+        }
+        
+        //Buying GTX 1660 Super Function
+        function buyGraphicsCard2() {
+            if (bitcoincount >= ((GraphicsCards2+1) * 75)) {
+                if (powerconsumed < (power - 0.29)) {
+                    bitcoincount = bitcoincount - ((GraphicsCards2+1) * 75);
+                    GraphicsCards2 = GraphicsCards2 + 1;
+                    powerconsumed = (powerconsumed*10) + 3;
+                    powerconsumed = powerconsumed/10;
+                update()
+                }
+                localStorage.setItem("GraphicsCards2", GraphicsCards2);
+                localStorage.setItem("bitcoincount", bitcoincount);
+            }
+        }
+        
+        //Buying GTX 2070 TI Function
+        function buyGraphicsCard3() {
+            if (bitcoincount >= ((GraphicsCards3+1) * 100)) {
+                if (powerconsumed < (power - 0.39)) {
+                bitcoincount = bitcoincount - ((GraphicsCards3+1) * 100);
+                GraphicsCards3 = GraphicsCards3 + 1;
+                powerconsumed = (powerconsumed*10) + 4;
+                    powerconsumed = powerconsumed/10;
+                update()
+                }
+                localStorage.setItem("GraphicsCards3", GraphicsCards3);
+                localStorage.setItem("bitcoincount", bitcoincount);
+            }
+        }
+        
+        //Buying RTX 3090 Function
+        function buyGraphicsCard4() {
+            if (bitcoincount >= ((GraphicsCards4+1) * 300)) {
+                if (powerconsumed < (power - 0.49)) {
+                bitcoincount = bitcoincount - ((GraphicsCards4+1) * 300);
+                GraphicsCards4 = GraphicsCards4 + 1;
+                powerconsumed = (powerconsumed*10) + 5;
+                    powerconsumed = powerconsumed/10;
+                setTimeout(function(){
+                    document.getElementById('rack4-1').style.display = "none";},10);
+                setTimeout(function(){
+                    document.getElementById('rack4-2').style.display = "none";},10);
+                setTimeout(function(){
+                    document.getElementById('rack4-3').style.display = "none";},10);
+                setTimeout(function(){
+                    document.getElementById('rack4-4').style.display = "none";},10);
+                setTimeout(function(){
+                    document.getElementById('rack4-5').style.display = "none";},10);
+                update()
+                }
+                localStorage.setItem("bitcoincount", bitcoincount);
+                localStorage.setItem("GraphicsCards4", GraphicsCards4);
+            }
+        }
+        
+        //Buying Multiplier Function
+        function buyMultiplier() {
+            if (bitcoincount >= (((multiplier+1) * 50)*(0.05*((multiplier+1) * 50)))) {
+                bitcoincount = bitcoincount - (((multiplier+1) * 50)*(0.05*((multiplier+1) * 50)));
+                multiplier = multiplier + 1;
+                update()
+            }
+        }
+
+        //Task Function
+        function task1() {
+            //First Task
+            if (autoClick == 1) {
+                document.getElementById('task').innerHTML = "Task: Buy one GTX 1050 TI.";
+                update()
+                task3 = 1;
+            }
+            //Second Task
+            if (GraphicsCards == 1) {
+                document.getElementById('task').innerHTML = "Task: Buy 5 GTX 1660 Super.";
+                update()
+                task4 = 1;
+            }
+            //Third Task
+            if (GraphicsCards2 == 5) {
+                document.getElementById('task').innerHTML = "Task: Buy one GTX 3090.";
+                update()
+                task5 = 1;
+            }
+            //Fourth Task
+            if (GraphicsCards4 >= 1) {
+                document.getElementById('task').innerHTML = "Task: Buy 10 GTX 3090.";
+                update()
+                mediumman = 2;
+            }
+            //Fifth Task
+            if (GraphicsCards4 >= 10) {
+                document.getElementById('task').innerHTML = "Task: Free Play.";
+                update()
+                richman = 2;
+            }
+            switch (localStorage.getItem("scene2")) {
+                case null:
+                    console.log("ran")
+                    //Sixth Task
+                    if (GraphicsCards4 == 1) {
+                        setTimeout(function(){
+                            document.getElementById('hidden').style.display = null;},1);
+                        setTimeout(function(){
+                            document.getElementById('hidden3').style.display = null;},1);
+                        setTimeout(function(){
+                            document.body.style.backgroundImage = "url('https://i.ibb.co/chnBgSz/mediumman2.jpg')";},500);
+                        setTimeout(function(){
+                            document.body.style.backgroundImage = null;},4000);
+                        setTimeout(function(){
+                            document.getElementById('hidden').style.display = "block";},4000);
+                        setTimeout(function(){
+                            document.getElementById('hidden3').style.display = "block";},4000);
+                        setTimeout(function(){
+                            document.getElementById('rack-outer').style.display = "block";},4000);
+                        setTimeout(function(){
+                            document.getElementById('rack-outer').style.display = "none";},1);
+                        localStorage.setItem("scene2", 1);
+                    }
+                break;
+            }
+            //Seventh task url('https://i.ibb.co/B2MQF4f/richman2.jpg')
+            switch (localStorage.getItem("scene3")) {
+                case null:
+                    //console.log("ran")
+                    //Sixth Task
+                    if (GraphicsCards4 == 10) {
+                        setTimeout(function(){
+                            document.getElementById('hidden').style.display = null;},1);
+                        setTimeout(function(){
+                            document.getElementById('hidden3').style.display = null;},1);
+                        setTimeout(function(){
+                            document.body.style.backgroundImage = "url('https://i.ibb.co/B2MQF4f/richman2.jpg')";},500);
+                        setTimeout(function(){
+                            document.body.style.backgroundImage = null;},4000);
+                        setTimeout(function(){
+                            document.getElementById('hidden').style.display = "block";},4000);
+                        setTimeout(function(){
+                            document.getElementById('hidden3').style.display = "block";},4000);
+                        setTimeout(function(){
+                            document.getElementById('rack-outer').style.display = "block";},4000);
+                        setTimeout(function(){
+                            document.getElementById('rack-outer').style.display = "none";},1);
+                        localStorage.setItem("scene3", 1);
+                    }
+                break;
+            }
+        }
+            
+            
+            
+            //console.log(isNaN(localStorage.getItem("bitcoincount", bitcoincount)))
+
+            function reset2() {
+            localStorage.setItem("reset2", 1);
+            if (isNaN(localStorage.getItem("newbitcoincount", bitcoincount))) {
+                //localStorage.setItem("newbitcoincount", localStorage.getItem("bitcoincount", bitcoincount))
+                console.log("if")
+            } else {
+                //localStorage.setItem("newbitcoincount", bitcoincount)
+                console.log("else")
+            }  
+
+        }
+        </script>
+
+
+
+</body>
+</html>
