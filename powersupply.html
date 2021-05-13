@@ -168,8 +168,18 @@
     function fasttimer() {
         update()
         if (localStorage.getItem("reset2") ==  1) {
+            switch (localStorage.getItem("power1")) {
+                case null:
+                localStorage.setItem("power1", power1);
+                localStorage.setItem("power2", power2);
+                localStorage.setItem("power3", power3);
+                localStorage.setItem("power4", power4);
+                localStorage.setItem("power5", power5);
+                break;
+            }
             power1 = localStorage.getItem("power1");
             power1 = parseInt(power1);
+            console.log(localStorage.getItem("power1"))
             power2 = localStorage.getItem("power2");
             power2 = parseInt(power2);
             power3 = localStorage.getItem("power3");
