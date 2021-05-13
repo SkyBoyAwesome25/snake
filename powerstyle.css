@@ -1,0 +1,674 @@
+.upgrade {
+    width: 50%;
+    height: 100px;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 48%;
+}
+#lightning {
+    margin-left: 85%;
+    width: 15%;
+    margin-bottom: 20px;
+}
+.amount {
+    color: white;
+    font-size: 20px;
+    float: right;
+    margin-right: 25px;
+}
+.amount2 {
+    color: white;
+    font-size: 20px;
+    float: right;
+    margin-right: 25px; 
+}
+#text {
+    color: white;
+    background-color: black;
+    background-color: transparent;
+    border-color: transparent;
+    width: 75px;
+    font-size: 20px;
+}
+#count {
+    color: white;
+    background-color: black;
+    background-color: transparent;
+    border-color: transparent;
+    width: 75px;
+    font-size: 20px;
+}
+.button {
+    background-color: transparent;
+    border-color: transparent;
+    width: 1000px;
+    font-size: 20px;
+    
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.upgradediv {
+    width: 100%;
+    height: 100%;
+}
+
+#powerdiv {
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    float: right;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000000ff;
+
+}
+
+.index {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background-color: #303030ff;
+    color: white;
+    left: 48%;
+    overflow: hidden;
+    top: 250px;
+}
+/* Rack */
+@media only screen and (min-width:300px) {
+@media only screen and (max-width:1099px) {
+    #powerdiv {
+        margin-top: 7%;
+        height: 100%;
+        width: 100%;
+        float: right;
+    }
+    #outerrack {
+        float: right;
+        background-color: #303030ff;
+        width: 40%;
+        height: 945px;
+    }   
+
+    #rack-outer {
+        background-color: #434343ff;
+        width: 40%;
+        height: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 3%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+    }
+
+    #rack1 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack2 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack3 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack4 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack5 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    #rack1-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/jHR7k2j/bronze-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    #rack1-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/jHR7k2j/bronze-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+
+    #rack2-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/RNDGmfR/iron-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    #rack2-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/RNDGmfR/iron-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 53%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    #rack3-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/gw7VCLK/titanium-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    #rack3-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/gw7VCLK/titanium-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    
+    #rack4-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/9pHF3D5/diamond-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    #rack4-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/9pHF3D5/diamond-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+
+    #rack5-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/WHsrk7b/solar-panel-gif.gif");
+        width: 40%;
+        height: 110px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 20px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #rack5-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/WHsrk7b/solar-panel-gif.gif");
+        width: 40%;
+        height: 110px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 20px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+}
+@media only screen and (min-width:1100px) {
+    @media only screen and (max-width:1300px) {
+        #powerdiv {
+            margin-top: 5%;
+            height: 100%;
+            width: 100%;
+            float: right;
+        }
+        #outerrack {
+            float: right;
+            background-color: #303030ff;
+            width: 40%;
+            height: 945px;
+        }   
+    
+        #rack-outer {
+            background-color: #434343ff;
+            width: 40%;
+            height: 92%;
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-top: 3%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        
+        }
+    
+        #rack1 {
+            background-color: #9f9e9e;
+            width: 90%;
+            height: 150px;
+            margin-left: 5%;
+            position: relative;
+            margin-top: 3%;
+        }
+    
+        #rack2 {
+            background-color: #9f9e9e;
+            width: 90%;
+            height: 150px;
+            margin-left: 5%;
+            position: relative;
+            margin-top: 3%;
+        }
+    
+        #rack3 {
+            background-color: #9f9e9e;
+            width: 90%;
+            height: 150px;
+            margin-left: 5%;
+            position: relative;
+            margin-top: 3%;
+        }
+    
+        #rack4 {
+            background-color: #9f9e9e;
+            width: 90%;
+            height: 150px;
+            margin-left: 5%;
+            position: relative;
+            margin-top: 3%;
+        }
+    
+        #rack5 {
+            background-color: #9f9e9e;
+            width: 90%;
+            height: 150px;
+            margin-left: 5%;
+            position: relative;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+    
+        #rack1-1 {
+            display: none;
+            background-image: url("https://i.ibb.co/jHR7k2j/bronze-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 6.5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        #rack1-2 {
+            display: none;
+            background-image: url("https://i.ibb.co/jHR7k2j/bronze-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 54.5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+    
+        #rack2-1 {
+            display: none;
+            background-image: url("https://i.ibb.co/RNDGmfR/iron-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        #rack2-2 {
+            display: none;
+            background-image: url("https://i.ibb.co/RNDGmfR/iron-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 53%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        #rack3-1 {
+            display: none;
+            background-image: url("https://i.ibb.co/gw7VCLK/titanium-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 6.5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        #rack3-2 {
+            display: none;
+            background-image: url("https://i.ibb.co/gw7VCLK/titanium-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 54.5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        
+        #rack4-1 {
+            display: none;
+            background-image: url("https://i.ibb.co/9pHF3D5/diamond-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 6.5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        #rack4-2 {
+            display: none;
+            background-image: url("https://i.ibb.co/9pHF3D5/diamond-power-gif-2.gif");
+            width: 200px;
+            height: 120px;
+            margin-left: 54.5%;
+            position: absolute;
+            margin-top: 30px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+    
+        #rack5-1 {
+            display: none;
+            background-image: url("https://i.ibb.co/WHsrk7b/solar-panel-gif.gif");
+            width: 40%;
+            height: 110px;
+            margin-left: 6.5%;
+            position: absolute;
+            margin-top: 20px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    
+        #rack5-2 {
+            display: none;
+            background-image: url("https://i.ibb.co/WHsrk7b/solar-panel-gif.gif");
+            width: 40%;
+            height: 110px;
+            margin-left: 54.5%;
+            position: absolute;
+            margin-top: 20px;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    }
+    }
+    @media only screen and (min-width:1301px) {
+    #powerdiv {
+        margin-top: 1%;
+        height: 100%;
+        width: 100%;
+        float: right;
+    }
+    #outerrack {
+        float: right;
+        background-color: #303030ff;
+        width: 40%;
+        height: 945px;
+    }   
+
+    #rack-outer {
+        background-color: #434343ff;
+        width: 40%;
+        height: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 3%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+    }
+
+    #rack1 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack2 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack3 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack4 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    #rack5 {
+        background-color: #9f9e9e;
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    #rack1-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/jHR7k2j/bronze-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #rack1-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/jHR7k2j/bronze-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+
+    #rack2-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/31zKQ2p/iron-power-gif-3.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #rack2-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/31zKQ2p/iron-power-gif-3.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #rack3-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/gw7VCLK/titanium-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #rack3-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/gw7VCLK/titanium-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    
+    #rack4-1 {
+        display: none;
+        background-image: url("https://i.ibb.co/9pHF3D5/diamond-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 6.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #rack4-2 {
+        display: none;
+        background-image: url("https://i.ibb.co/9pHF3D5/diamond-power-gif-2.gif");
+        width: 200px;
+        height: 120px;
+        margin-left: 54.5%;
+        position: absolute;
+        margin-top: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+
+    #rack5-1 {
+    display: none;
+    background-image: url("https://i.ibb.co/WHsrk7b/solar-panel-gif.gif");
+    width: 40%;
+    height: 120px;
+    margin-left: 6.5%;
+    position: absolute;
+    margin-top: 20px;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    }
+
+    #rack5-2 {
+    display: none;
+    background-image: url("https://i.ibb.co/WHsrk7b/solar-panel-gif.gif");
+    width: 40%;
+    height: 110px;
+    margin-left: 54.5%;
+    position: absolute;
+    margin-top: 20px;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    }
+}
+
